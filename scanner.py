@@ -5,7 +5,7 @@
 import re
 import urllib
 
-with open('/mnt/c/Users/niklas/Documents/MEGA/DHGE_Gera/sem6/cloud_computing/philipp/Virusemails.txt') as f:
+with open('/mnt/c/Users/.../Virusemails.txt') as f:
     text = f.read()
 
     href_regex = 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
