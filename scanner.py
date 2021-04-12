@@ -25,7 +25,7 @@ f.close()
 
 whitelist = ['aol', 'analytik','gmx','gmail']
 
-with open('/mnt/c/Users/niklas/Documents/MEGA/DHGE_Gera/sem6/cloud_computing/philipp/result.txt', 'a') as f:
+with open('/mnt/c/Users/..../result.txt', 'a') as f:
     for item in urlsdns:
         input=item.translate(item.maketrans('','','*%,&@!;<>:()"'))
         if any(x in input for x in whitelist):
