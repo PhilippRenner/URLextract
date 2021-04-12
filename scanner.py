@@ -18,12 +18,12 @@ with open('/mnt/c/Users/.../Virusemails.txt') as f:
 #print(urlsdns)
 
 
-with open('/mnt/c/Users/niklas/Documents/MEGA/DHGE_Gera/sem6/cloud_computing/philipp/result.txt', 'w') as f:
+with open('/mnt/c/Users/.../result.txt', 'w') as f:
     for item in urls:
         f.write("\n"+item)
 f.close()
 
-whitelist = ['aol', 'analytik','gmx','gmail']
+whitelist = ['aol', 'analytik-jena','gmx','gmail']
 
 with open('/mnt/c/Users/..../result.txt', 'a') as f:
     for item in urlsdns:
