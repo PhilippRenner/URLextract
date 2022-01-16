@@ -9,15 +9,15 @@ import urllib
 with open('/home/philipp/Virusemails.txt') as f:
     text = f.read()
 
-    #href_regex = 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
-    href_regex = '(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
+    href_regex = 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
+    #href_regex = '(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
     urls = re.findall(href_regex, text)
 
     href_regex_dns = '@\S+[.]\S+'
     #href_regex_dns = '@S+([\w-]+\.)+[\w-]{2,4}$'
     urlsdns = re.findall(href_regex_dns, text)
 
-#print(urlsdns)
+print(urlsdns)
 
 
 with open('/home/philipp/PHURLresult.txt', 'w') as f:
