@@ -14,7 +14,7 @@ with open('/home/Virusemails.txt') as f:
     urls = re.findall(href_regex, text)
 
     href_regex_dns = '@\S+[.]\S+'
-    #href_regex_dns = '@S+([\w-]+\.)+[\w-]{2,4}$'
+    href_regex_dns = '@S+([\w-]+\.)+[\w-]{2,4}$'
     urlsdns = re.findall(href_regex_dns, text)
 
 print(urlsdns)
