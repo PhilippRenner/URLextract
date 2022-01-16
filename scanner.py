@@ -5,7 +5,8 @@
 import re
 import urllib
 
-with open('/mnt/c/Users/.../Virusemails.txt') as f:
+#with open('/mnt/c/Users/.../Virusemails.txt') as f:
+with open('/home/philipp/Virusemails.txt') as f:
     text = f.read()
 
     #href_regex = 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
@@ -19,14 +20,14 @@ with open('/mnt/c/Users/.../Virusemails.txt') as f:
 #print(urlsdns)
 
 
-with open('/mnt/c/Users/.../result.txt', 'w') as f:
+with open('/home/philipp/PHURLresult.txt', 'w') as f:
     for item in urls:
         f.write("\n"+item)
 f.close()
 
-whitelist = ['aol', 'analytik-jena','gmx','gmail']
+whitelist = ['aol', 'analytik-jena','gmx','gmail','web']
 
-with open('/mnt/c/Users/..../result.txt', 'a') as f:
+with open('/home/philipp/PHURLresult.txt', 'a') as f:
     for item in urlsdns:
         input=item.translate(item.maketrans('','','*%,&@!;<>:()"'))
         if any(x in input for x in whitelist):
